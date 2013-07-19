@@ -7,7 +7,9 @@ app.get('/', function(request, response) {
 
 //  var buf = new Buffer(fs.readFileSync('index.html', 'utf8'));
 
-  response.send('Temp \n');
+  var buf = new Buffer(256);
+
+  response.send('Temp ' + buf.toString()  + ' bits  \n');
 
 });
 
