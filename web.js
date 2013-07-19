@@ -3,11 +3,11 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-//  fs = require('fs');
+  fs = require('fs');
 
-//  var buf = new Buffer(fs.readFileSync('index.html', 'utf8'));
+  var buf = new Buffer(fs.readFileSync('index.html', 'utf8'));
 
-  var buf = new Buffer(256);
+//  var buf = new Buffer(256);
 
   response.send('Temp ' + buf.toString()  + ' bits  \n');
 
